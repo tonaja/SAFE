@@ -1,0 +1,155 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    background-color: #f0f0f5;
+}
+
+.container {
+    display: flex;
+}
+
+.sidebar {
+    width: 60px;
+    background-color: #2d2d3a;
+    color: #fff;
+    height: 100vh;
+    padding: 20px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.sidebar-icon {
+    margin: 50px 0;
+}
+
+.sidebar-icon img {
+    width: 30px;
+    height: 30px;
+}
+
+.sidebar-icon a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.main-content {
+    flex: 1;
+    padding: 20px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.user-info h2 {
+    margin: 0;
+}
+
+.search-bar input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.courses {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.courses h3 {
+    margin-top: 0;
+}
+
+.tabs {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.tab {
+    padding: 10px 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
+    cursor: pointer;
+}
+
+.tab.active {
+    background-color: #007bff;
+    color: #fff;
+    border-color: #007bff;
+}
+
+.course-list {
+    display: grid;
+    gap: 20px;
+}
+
+.course {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+}
+
+.course-info h4 {
+    margin: 0 0 10px 0;
+}
+
+.details-button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.details-button:hover {
+    background-color: #0056b3;
+}
+
+.schedule {
+    margin-top: 20px;
+}
+
+.schedule h4 {
+    margin-top: 0;
+}
+
+.schedule ul {
+    list-style: none;
+    padding: 0;
+}
+
+.schedule ul li {
+    display: flex;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+.schedule ul li span {
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+.hours-chart {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    margin-top: 20px;
+}

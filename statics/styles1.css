@@ -1,0 +1,247 @@
+/* styles1.css */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.container {
+    display: flex;
+    flex-direction: row;
+    height: 100vh;
+    width: 100%;
+}
+
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 20px;
+
+}
+
+
+.nav-icon {
+    width: 16px;
+    height: 16px;
+    vertical-align: middle;
+    margin-right: 5px;
+}
+
+.nav a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 16px;
+}
+
+.welcome-section_Login {
+        background: #000745 url('image/login.jpg') no-repeat center center;
+        background-size: cover; /* Ensures the image covers the section */
+        color: #ccc;
+        padding: 40px;
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: left;
+    
+}
+
+.welcome-section_signup {
+    background: #000745 url('image/img1.jpg') no-repeat center center;
+    background-size: cover; /* Ensures the image covers the section */
+    color: #ccc;
+    padding: 40px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
+
+}
+.welcome-section h1 {
+    margin-bottom: 10px;
+}
+
+.welcome-section p {
+    margin-bottom: 20px;
+}
+
+.welcome-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.welcome-section li {
+    margin-bottom: 10px;
+}
+
+
+.form-section {
+    background: #fff;
+    padding: 40px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.form-section h2 {
+    margin-bottom: 20px;
+    font-weight: normal;
+}
+
+.form-section .active {
+    font-weight: bold;
+    color: #000745;
+}
+
+.form-section label {
+    margin-bottom: 5px;
+    font-size: 14px;
+    color: #333;
+    display: block;
+}
+
+
+
+
+.POST {
+    background: #fff;
+    padding: 40px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.POST h2 {
+    margin-bottom: 20px;
+    font-weight: normal;
+}
+
+.POST .center {
+    font-weight: bold;
+    color: #000745;
+}
+
+.form-group label {
+    margin-bottom: 5px;
+    font-size: 14px;
+    color: #333;
+    display: block;
+}
+
+
+
+.radio-group {
+    margin-bottom: 15px;
+}
+
+.radio-group label {
+    margin-right: 20px;
+    font-size: 14px;
+    color: #333;
+}
+
+.form-section input[type="text"],
+.form-section input[type="email"],
+.form-section input[type="password"] {
+    margin-bottom: 15px;
+    padding: 10px;
+    font-size: 16px;
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+
+
+.form-section button {
+    background-color: #000744;
+    color: rgba(255, 255, 255, 0.8);
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+}
+
+.form-section p {
+    margin-top: 20px;
+    color: #666;
+}
+
+.form-section p a {
+    text-decoration: none;
+    color: #007bff;
+    font-weight: bold;
+    margin-left: 5px;
+}
+
+
+
+.footer {
+    background-color: #f1f1f1;
+    padding: 20px 0;
+    text-align: center;
+    margin-top: 40px;
+    flex-direction: row;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    margin: auto;
+}
+
+.footer-logo {
+    display: flex;
+    align-items: center;
+}
+
+.footer-logo img {
+    width: 40px;
+    margin-right: 10px;
+}
+
+.footer-logo span {
+    font-size: 24px;
+    color: #000745;
+    font-family: Garamond, serif;
+}
+
+.footer-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 60%;
+}
+
+.footer-links a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: #333;
+    font-size: 16px;
+}
+
+.footer-social {
+    display: flex;
+    align-items: center;
+}
+
+.footer-social a {
+    margin: 0 10px;
+}
+
+.footer-social img {
+    width: 24px;
+}

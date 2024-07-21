@@ -1,0 +1,151 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    margin: 0;
+    height: 100vh;
+}
+
+.container {
+    display: flex;
+    flex: 1;
+}
+
+.sidebar {
+    width: 200px;
+    background-color: #f0f4f8;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #000745;
+    font-family: Garamond, serif;
+}
+
+.menu a {
+    text-decoration: none;
+    color: #333;
+    padding: 10px 0;
+    width: 100%;
+    text-align: center;
+    display: block;
+}
+
+.menu a:hover {
+    background-color: #e0e4e8;
+    border-radius: 5px;
+}
+
+.help {
+    margin-top: auto;
+    text-align: center;
+}
+
+.help img {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 10px;
+}
+
+.main-content {
+    flex: 1;
+    padding: 20px;
+    background-color: #fff;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.header h2 {
+    margin: 0;
+    color: #000745;
+    font-family: Garamond, serif;
+}
+
+.header p {
+    margin: 0;
+}
+
+.header button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.header button:hover {
+    background-color: #0056b3;
+}
+
+.classes {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.class-card {
+    flex: 1;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.lessons table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+.lessons table, .lessons th, .lessons td {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+.lessons th {
+    background-color: #f0f0f0;
+    text-align: left;
+}
+
+.profile {
+    width: 250px;
+    background-color: #f0f4f8;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.profile-pic img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.calendar, .reminders {
+    width: 100%;
+    margin-top: 20px;
+}
+
+.calendar h3, .reminders h3 {
+    margin-bottom: 10px;
+}
+
+.reminders p {
+    margin: 5px 0;
+}

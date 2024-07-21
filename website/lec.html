@@ -1,0 +1,93 @@
+{% extends "homeDoctor.html" %}
+{% block title %} Lectures {% endblock %}
+{% block content %}
+<link rel="stylesheet" href="/static/styles12.css">
+<main class="main-content">
+    <div class="head">
+        <div class="user-info">
+            <h1><span class="active">Start lecture</span></h1>
+        </div>
+    </div>
+    <form action="{{ url_for('auth.recognize', id=user.id) }}" method="POST">
+        <section class="lecture">
+            <div class="lecture-item">
+                <h2>Lecture</h2>
+                <select id="lecture_type" name="lecture_type" class="select">
+                    <option value="" disabled selected>Select</option>
+                    <option value="Offline">Offline</option>
+                    <option value="Online">Online</option>
+                </select>
+            </div>
+
+            <div class="lecture-item">
+                <h2>Courses</h2>
+                <select id="course" name="course" class="select">
+                    <option value="" disabled selected>Select</option>
+                    <option value="Artificial Intelligence">Artificial Intelligence</option>
+                    <option value="Machine Learning">Machine Learning</option>
+                    <option value="Natural Language Processing">Natural Language Processing</option>
+                    <option value="Theory of Computation">Theory of Computation</option>
+                </select>
+            </div>
+            <div class="lecture-item">
+                <h2>Time</h2>
+                <select id="time" name="time" class="select">
+                    <option value="" disabled selected>Select</option>
+                    <option value="1 Hour">1 Hour</option>
+                    <option value="1:30 Hours">1:30 Hours</option>
+                    <option value="1:40 Hours">1:40 Hours</option>
+                    <option value="2 Hours">2 Hours</option>
+                </select>
+            </div>
+            <br><br>
+            <div class="lecture-item">
+                <br>
+                <button type="submit">Start</button>
+            </div>
+        </section>
+    </form>
+
+    <div class="user-info">
+        <h1><span class="active">Old lecture details or Lessons</span></h1>
+    </div>
+    <div class="lessons">
+        <table>
+            <tr>
+                <th>Courses</th>
+                <th>Time</th>
+                <th>Details</th>
+            </tr>
+            <tr>
+                <td>Machine Learning</td>
+                <td>1 Hour</td>
+                <td><a href=#>See</a></td>
+            </tr>
+            {% for lec in Lecture %}
+            <tr>
+                <td>{{ lec.course }}</td>
+                <td>{{ lec.time }}</td>
+                <td><a href="{{ url_for('auth.download_csv', lecture_id=lecture.id) }}">See</a></td>
+            </tr>
+            {% endfor %}
+        </table>
+    </div>
+</main>
+
+<footer id="footer" class="footer">
+    <div class="footer-content">
+        <div class="footer-logo">
+            <img src="/static/imageSAFE.png" alt="Logo">
+            <span>SAFE</span>
+        </div>
+        <div class="footer-links">
+            <a href="#">Contact Us</a>
+            <a href="#">Terms of Service</a>
+        </div>
+        <div class="footer-social">
+            <a href="#"><img src="/static/imageinstagram.png" alt="Instagram"></a>
+            <a href="#"><img src="/static/imagefacebook.png" alt="Facebook"></a>
+            <a href="#"><img src="/static/imagegithub.png" alt="Github"></a>
+        </div>
+    </div>
+</footer>
+{% endblock %}

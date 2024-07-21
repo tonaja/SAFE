@@ -1,0 +1,78 @@
+{% extends "base.html" %}
+{% block title %}Sign Up{% endblock %}
+{% block content %}
+<link rel="stylesheet" href="/static/styles1.css">
+<div class="container">
+    <div class="welcome-section_signup">
+        <h1>Welcome</h1>
+        
+        </ul>
+    </div>
+    <div class="form-section">
+    <form method="POST">
+        <h2><span class="active">SIGN UP</span></h2>
+        <div class="radio-group">
+            <label>
+                <input type="radio" name="role" value="student" id="student" onclick="toggleStudentID(true)" required> Student
+            </label>
+            <label>
+                <input type="radio" name="role" value="doctor" id="doctor" onclick="toggleStudentID(false)"> Doctor
+            </label>
+        </div>
+        <div class="form-group" id="student-id-group" style="display: none;">
+            <label for="student_id">Student ID</label>
+            <input type="text" class="form-control" id="student_id" name="student_id" placeholder="Enter Student ID"/>
+        </div>
+        <div class="form-group">
+            <label for="email">Email Address</label>
+            <input type="email" class="form-control" id="email" name="email" placeholder="Enter email" required />
+        </div>
+        <div class="form-group">
+            <label for="firstname">First Name</label>
+            <input type="text" class="form-control" id="firstname" name="firstname" placeholder="Enter first name" required />
+        </div>
+        <div class="form-group">
+            <label for="lastname">Last Name</label>
+            <input type="text" class="form-control" id="lastname" name="lastname" placeholder="Enter last name" required />
+        </div>
+        <div class="form-group">
+            <label for="password1">Password</label>
+            <input type="password" class="form-control" id="password1" name="password1" placeholder="Enter password" required />
+        </div>
+        <div class="form-group">
+            <label for="password2">Password (Confirm)</label>
+            <input type="password" class="form-control" id="password2" name="password2" placeholder="Confirm password" required />
+        </div>
+        <br />
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+</div>
+</div>
+<footer id="footer"class="footer">
+    <div class="footer-content">
+        <div class="footer-logo">
+            <img src="/static/image/SAFE.png" alt="Logo">
+            <span>SAFE</span>
+        </div>
+        <div class="footer-links">
+            <a href="#">Contact Us</a>
+            <a href="#">Terms of Service</a>
+        </div>
+        <div class="footer-social">
+            <a href="#"><img src="/static/image/instagram.png" alt="Instagram"></a>
+            <a href="#"><img src="/static/image/facebook.png" alt="Facebook"></a>
+            <a href="#"><img src="/static/image/github.png" alt="Github"></a>
+        </div>
+    </div>
+   </footer>
+<script>
+    function toggleStudentID(show) {
+        var studentIDGroup = document.getElementById('student-id-group');
+        if (show) {
+            studentIDGroup.style.display = 'block';
+        } else {
+            studentIDGroup.style.display = 'none';
+        }
+    }
+</script>
+{% endblock %}

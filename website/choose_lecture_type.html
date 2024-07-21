@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Choose Lecture Type</title>
+</head>
+<body>
+    <form method="POST">
+        <label for="course">Course:</label>
+        <input type="text" id="course" name="course" required><br>
+        <label for="time">Time:</label>
+        <input type="text" id="time" name="time" required><br>
+        <label for="lecture_type">Lecture Type:</label>
+        <select id="lecture_type" name="lecture_type" required>
+            <option value="offline">Offline</option>
+            <option value="online">Online</option>
+        </select><br>
+        <button type="submit">Save</button>
+    </form>
+</body>
+</html>

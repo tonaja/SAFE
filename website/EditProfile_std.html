@@ -1,0 +1,60 @@
+{% extends "homeStudent.html" %}
+{% block title %}Student Profile{% endblock %}
+{% block content %}
+    <link rel="stylesheet" href="/static/styles7.css">
+    <div class="profile-container">
+        <div class="profile-edit">
+            <h1>Edit Profile</h1>
+            <form action="{{ url_for('auth.update', id=user.id) }}" method="POST">
+                <div class="profile-picture">
+                    <img src="/static/profile.png" alt="Profile Picture">
+                </div>
+                <div class="form-group">
+                    <label for="first-name">First Name</label>
+                    <input type="text" id="firstname" name="firstname" value="{{ user.first_name }}">
+                </div>
+                <div class="form-group">
+                    <label for="last-name">Last Name</label>
+                    <input type="text" id="lastname" name="lastname" value="{{ user.last_name }}">
+                </div>
+                <div class="form-group">
+                    <label for="last-name">ID</label>
+                    <input type="text" id="ID" name="ID" value="{{ user.student_id }}">
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" value="{{ user.email }}">
+                </div>
+                <div class="form-group">
+                    <label for="new_password">Update Password</label>
+                    <input type="password" id="password1" name="password1">
+                </div>
+                <div class="form-group">
+                    <label for="new_password">Confirm Password</label>
+                    <input type="password" id="password2" name="password2">
+                </div>           
+                <button type="submit">Save</button>
+            </form>
+            <form action="{{ url_for('auth.capture_face_route', id=user.id) }}" method="POST">
+                <button type="capure Face">Capture Face  <img src="/static/image/SAFE2.png" alt="face_ID" class="face_ID"></button>
+            </form>
+        </div>
+    </div>
+    <footer id="footer" class="footer">
+       <div class="footer-content">
+           <div class="footer-logo">
+               <img src="/static/SAFE.png" alt="Logo">
+               <span>SAFE</span>
+           </div>
+           <div class="footer-links">
+               <a href="#">Contact Us</a>
+               <a href="#">Terms of Service</a>
+           </div>
+           <div class="footer-social">
+               <a href="#"><img src="/static/instagram.png" alt="Instagram"></a>
+               <a href="#"><img src="/static/facebook.png" alt="Facebook"></a>
+               <a href="#"><img src="/static/github.png" alt="Github"></a>
+           </div>
+       </div>
+   </footer>
+{% endblock %}

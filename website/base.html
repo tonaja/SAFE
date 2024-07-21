@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+      crossorigin="anonymous"
+    />
+    <link rel="icon" type="image/x-icon" href="/static/image/SAFE1.ico">
+    <link rel="stylesheet" href="/static/styles2.css">
+
+
+    <title>{% block title %}main{% endblock %}</title>
+  </head>
+  <body>
+    <div class="background-container">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#000745" fill-opacity="0.8" d="M0,96L24,106.7C48,117,96,139,144,138.7C192,139,240,117,288,133.3C336,149,384,203,432,240C480,277,528,299,576,272C624,245,672,171,720,154.7C768,139,816,181,864,208C912,235,960,245,1008,261.3C1056,277,1104,299,1152,293.3C1200,288,1248,256,1296,256C1344,256,1392,288,1416,304L1440,320L1440,0L1416,0C1392,0,1344,0,1296,0C1248,0,1200,0,1152,0C1104,0,1056,0,1008,0C960,0,912,0,864,0C816,0,768,0,720,0C672,0,624,0,576,0C528,0,480,0,432,0C384,0,336,0,288,0C240,0,192,0,144,0C96,0,48,0,24,0L0,0Z"></path></svg>
+    </div>
+      <div  class="container1" id="navbar">
+        {% block header %}
+        <header class="header">
+          <div class="title-bar">
+            <img src="/static/image/SAFE1.ico" alt="SAFE Icon" class="title-icon">
+            <span class="title-text">SAFE</span>
+          </div>
+          <nav class="nav">
+          <a id="home" href="/"><img src="/static/image/Home2.png" alt="Home Icon" class="nav-icon">Home</a>
+          
+          {% if user.is_authenticated %}
+          <a id="logout" href="/logout">Logout</a>
+          {% else %}
+          <a href="#about">About</a>
+          <a href="#team">Team</a>
+          <a href="#footer">Contact</a>
+          <a  id="login" href="/login">Login</a>
+          <a  id="signup" href="/signup">Sign Up</a>
+          {% endif %}
+        </nav>
+        </header>
+        {%endblock%}
+      
+
+    {% with messages = get_flashed_messages(with_categories=true) %} {% if
+    messages %} {% for category, message in messages %} {% if category ==
+    'error' %}
+    <div class="alert alert-danger alter-dismissable fade show" role="alert">
+      {{ message }}
+      <button type="button" class="close" data-dismiss="alert">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    {% else %}
+    <div class="alert alert-success alter-dismissable fade show" role="alert">
+      {{ message }}
+      <button type="button" class="close" data-dismiss="alert">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    {% endif %} {% endfor %} {% endif %} {% endwith %}
+
+    <div>{% block content %} {% endblock %}</div>
+  </div>
+   
+  </body>
+</html>

@@ -1,0 +1,69 @@
+{% extends "base.html" %}
+{% block title %}Log In{% endblock %}
+{% block content %}
+<link rel="stylesheet" href="/static/styles1.css">
+<div class="container">
+    <div class="welcome-section_Login ">
+        <h1>Welcome back</h1>
+    
+        </ul>
+    </div>
+    <div class="form-section">
+        <h2><span class="active">Login</span></h2>
+        <form id="login-form" method="POST">
+            <div class="radio-group">
+                <label>
+                    <input type="radio" name="role" value="student" id="student" onclick="toggleStudentID(true)" required> Student
+                </label>
+                <label>
+                    <input type="radio" name="role" value="doctor" id="doctor" onclick="toggleStudentID(false)"> Doctor
+                </label>
+            </div>
+            <div class="form-group" id="student-id-group" style="display: none;">
+                <label for="student_id">Student ID</label>
+                <input type="text" class="form-control" id="student_id" name="student_id" placeholder="Enter Student ID"/>
+            </div>
+            <div class="form-group" id="email-group" style="display: none;">
+                <label for="email">Email Address</label>
+                <input type="email" class="form-control" id="email" name="email" placeholder="Enter email"/>
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" class="form-control" id="password" name="password" placeholder="Enter password" required />
+            </div>
+            <button type="submit">Login</button>
+        </form>
+    </div>
+</div>
+<footer id="footer"class="footer">
+    <div class="footer-content">
+        <div class="footer-logo">
+            <img src="/static/image/SAFE.png" alt="Logo">
+            <span>SAFE</span>
+        </div>
+        <div class="footer-links">
+            <a href="#">Contact Us</a>
+            <a href="#">Terms of Service</a>
+        </div>
+        <div class="footer-social">
+            <a href="#"><img src="/static/image/instagram.png" alt="Instagram"></a>
+            <a href="#"><img src="/static/image/facebook.png" alt="Facebook"></a>
+            <a href="#"><img src="/static/image/github.png" alt="Github"></a>
+        </div>
+    </div>
+   </footer>
+<script>
+    function toggleStudentID(show) {
+        var studentIDGroup = document.getElementById('student-id-group');
+        var emailGroup = document.getElementById('email-group');
+
+        if (show) {
+            studentIDGroup.style.display = 'block';
+            emailGroup.style.display= 'none';
+        } else {
+            studentIDGroup.style.display = 'none';
+            emailGroup.style.display= 'block';
+        }
+    }
+</script>
+{% endblock %}
